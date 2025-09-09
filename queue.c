@@ -5,7 +5,7 @@ int queue [MAX];
 int front = -1,rear = -1;
 void enqueue(int value) {
 	if(rear==MAX-1){
-		printf("queue overflow ! cannot insert %d\n" ,value);
+		printf("queue overfloww ! cannot insert %d\n" ,value);
 	}
 	else
 	{
