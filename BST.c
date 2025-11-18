@@ -87,7 +87,9 @@ struct node* deleteNode(struct node* root, int key) {
     else if (key > root->data)
         root->right = deleteNode(root->right, key);
     else {
-        
+	    
+
+
         if (root->left == NULL) {
             struct node* temp = root->right;
             free(root);
@@ -98,13 +100,15 @@ struct node* deleteNode(struct node* root, int key) {
             return temp;
         }
 
-        
+
+
         struct node* temp = findMin(root->right);
         root->data = temp->data;
         root->right = deleteNode(root->right, temp->data);
     }
     return root;
 }
+
 
 // Main function: Menu-driven program
 int main() {
@@ -179,3 +183,4 @@ int main() {
 
     return 0;
 }
+
